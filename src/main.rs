@@ -35,6 +35,7 @@ async fn log_message(
             return Ok(());
         }
     };
+    println!("Received {n} bytes from {client}");
     let line_stamp = format!("$$${}$$${}$$${n}$$$", now(), client);
     {
         let mut file_guard = file.lock().await;
